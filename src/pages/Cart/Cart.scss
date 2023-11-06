@@ -1,0 +1,204 @@
+.cart {
+  @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Junge&family=Monoton&family=Source+Code+Pro&display=swap");
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: Source Code Pro;
+  align-items: center;
+  gap: 20px;
+  min-height: 100vh;
+
+  .cart-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .sticky-checkout {
+    width: 95%;
+    border-radius: 10px;
+    background-color: #fdcf76;
+    margin-top: auto;
+  }
+
+  .cart-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 30px;
+    background-color: rgb(248, 180, 180);
+    padding: 25px;
+    width: 100%;
+
+    img {
+      width: 5%;
+      height: auto;
+    }
+  }
+
+  .cart-card {
+    max-height: 180px;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    background-color: #f9f2e2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    .quantity {
+      background-color: white;
+      padding: 15px 32px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      border: 1px solid black;
+      font-weight: 900;
+    }
+
+    .add {
+      &:hover {
+        background-color: #00ff00;
+      }
+    }
+
+    .minus {
+      &:hover {
+        background-color: #f08080;
+      }
+    }
+
+    .name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 30%;
+      font-size: 22px;
+    }
+
+    .quantity-control {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      gap: 5%;
+
+      button {
+        padding: 15px 32px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+      }
+    }
+
+    img {
+      max-width: 15%;
+      height: auto;
+      margin: 0;
+      padding: 10px;
+      object-fit: cover;
+    }
+
+    .cart-components {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    li {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .cart-end {
+      width: 30%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5%;
+
+      p {
+        font-weight: 900;
+        font-size: 20px;
+      }
+
+      button {
+        padding: 15px 32px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .cart {
+    .sticky-checkout {
+      height: 15% !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      border-radius: 0 !important;
+    }
+
+    .name {
+      font-size: 18px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .cart {
+    padding: 15px;
+    .cart-header{
+      padding: 15px;
+    }
+    .sticky-checkout {
+      height: 15% !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      border-radius: 0 !important;
+    }
+
+    .name {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      font-size: 16px !important;
+    }
+
+    button {
+      padding: 2px 2px !important;
+      border-radius: 0px !important;
+      box-shadow: none !important;
+      background-color: transparent !important;
+    }
+
+    .quantity {
+      padding: 2px 2px !important;
+      border-radius: 0px !important;
+      box-shadow: none !important;
+      border: none !important;
+      background-color: transparent !important;
+    }
+    p{
+      font-size: 14 px !important;
+      text-align: center !important;
+    }
+    .quantity-control{
+      gap: 15% !important;
+    }
+
+    img{
+      max-width: 25% !important;
+    }
+  }
+}

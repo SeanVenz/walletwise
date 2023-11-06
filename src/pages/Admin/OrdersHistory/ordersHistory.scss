@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Junge&family=Monoton&family=Source+Code+Pro&display=swap");
+
+.admin-order-history {
+  background-color: #f9f2e2;
+  width: 100%;
+  font-family: Source Code Pro;
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 800;
+  }
+
+  .order-card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: auto;
+
+    .order-card {
+      list-style: none;
+      width: 350px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      align-items: center;
+
+      .order-id {
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+
+    .admin-order-deets {
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .total {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .scrollable-list {
+      display: flex;
+      flex-direction: column;
+      height: 150px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+      width: 100%;
+      padding: 10px;
+
+      .items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 3%;
+      }
+    }
+
+    .deets {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid black;
+      margin-top: 4%;
+      padding-bottom: 4%;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .admin-order-history {
+    background-color: #f9f2e2;
+    width: 100%;
+    font-family: Source Code Pro;
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 800;
+    }
+
+    .order-card-container {
+      padding-top: 5%;
+
+      .order-card {
+        list-style: none;
+        width: 350px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        align-items: center;
+
+        .order-id {
+          font-weight: 600;
+          font-size: 18px;
+        }
+      }
+
+      .admin-order-deets {
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .total {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .scrollable-list {
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+        overflow-y: scroll;
+        border: 1px solid #ccc;
+        width: 100%;
+        padding: 10px;
+
+        .items {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-bottom: 5px;
+        }
+      }
+
+      .deets {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid black;
+        margin-top: 4%;
+        padding-bottom: 4%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .admin-order-history {
+    height: 100%;
+
+    h3 {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .order-card-container {
+        padding-top: 12%;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 8%;
+
+      .order-card {
+        list-style: none;
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        align-items: center;
+
+        .order-id {
+          font-weight: 600;
+          font-size: 16px;
+        }
+      }
+
+      .admin-order-deets {
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .total {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .scrollable-list {
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+        overflow-y: scroll;
+        border: 1px solid #ccc;
+        width: 100%;
+        padding: 10px;
+
+        .items {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-bottom: 10px;
+        }
+      }
+
+      .deets {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid black;
+        margin-top: 0;
+        padding-bottom: 1%;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.food-nav {
+  background-color: #dadeff;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  bottom: 2%;
+  border: none;
+  border-radius: 20px;
+}
+
+.food-nav img {
+  width: 8%;
+  height: auto;
+  cursor: pointer;
+  margin: 5px 20px;
+}
+
+.food-nav img:hover {
+  border-radius: 45px;
+  background-color: green;
+}

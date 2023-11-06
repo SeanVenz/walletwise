@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Junge&family=Monoton&family=Source+Code+Pro&display=swap");
+
+.order-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  .order-modal-content {
+    background-color: #ddfdfd;
+    background-image: url("../../images/order-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 40%;
+    text-align: center;
+    position: relative;
+    height: 50%;
+  }
+
+  .order-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    color: #333;
+  }
+
+  h2 {
+    margin-top: 0;
+    text-align: start;
+    font-family: Source Code Pro;
+    font-weight: 800;
+    font-size: 40px;
+  }
+
+  .order-data {
+    display: flex;
+    flex-direction: column;
+    .foods {
+      display: flex;
+      flex-direction: column;
+      padding-top: 5%;
+      .food-heading{
+        display: flex;
+        width: 50%;
+        justify-content: start;
+        margin-bottom: -4%;
+      }
+
+      .scrollable {
+        height: 150px;
+        overflow-y: scroll;
+        border: 1px solid black;
+        width: 50%;
+        font-family: Source Code Pro;
+
+        ul{
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+        .deets{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+
+          p{
+            font-size: 20px;
+          }
+          .total{
+            font-weight: 800;
+          }
+          li{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+          }
+        }
+      }
+
+      .order-total{
+        margin-top: -3%;
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        font-family: Source Code Pro;
+        font-weight: 800;
+        font-size: 26px;
+      }
+    }
+    .name {
+      width: 100%;
+      font-family: Source Code Pro;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  button {
+    background-color: #ff93ad !important;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ff93ad;
+    font-family: Source Code Pro;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 10px 26px;
+    border-radius: 10px;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid #f9f2e2;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .order-modal{
+    .order-modal-content{
+      width: 60% !important;
+    }
+
+    .deets{
+      width: 100% !important;
+    }
+
+    .scrollable{
+      width: 60% !important;
+      justify-content: space-between !important;
+    }
+
+    .order-total{
+      width: 60% !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .order-modal{
+    .order-modal-content{
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .deets{
+      width: 100% !important;
+    }
+
+    .scrollable{
+      width: 80% !important;
+      justify-content: space-between !important;
+    }
+
+    .order-total{
+      width: 80% !important;
+    }
+    h2{
+      padding-top: 8%;
+      font-size: 30px;
+    }
+    .order-close-button{
+      margin-top: 2%;
+    }
+  }
+}

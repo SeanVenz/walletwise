@@ -1,0 +1,57 @@
+.image-ul {
+  @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Junge&family=Monoton&family=Source+Code+Pro&display=swap");
+  overflow: hidden;
+
+  .image-li {
+    list-style-type: none;
+    background-color: silver;
+    position: relative;
+    transform: rotate(45deg);
+    overflow: hidden;
+  }
+  .diamond1 {
+    margin: 0px;
+
+    .image {
+      background: url(../../images/kenthalf.png);
+      background-size: cover;
+    }
+  }
+  .diamond2 {
+    margin-top: 120px;
+    margin-left: -30px;
+    .image {
+      background: url(../../images/shane.png);
+      background-size: cover;
+    }
+  }
+  .diamond3 {
+    margin-left: -30px;
+    .image {
+      background: url(../../images/sean.png);
+      background-size: cover;
+    }
+  }
+  .diamond4 {
+    margin-top: 120px;
+    margin-left: -30px;
+    .image {
+      background: url(../../images/estrella.png);
+      background-size: cover;
+    }
+  }
+  .diamond5 {
+    margin-left: -30px;
+    .image {
+      background: url(../../images/potolin.png);
+      background-size: cover;
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: rotate(-45deg) scale(1.42);
+  }
+}

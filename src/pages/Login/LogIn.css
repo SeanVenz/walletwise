@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Junge&family=Monoton&family=Source+Code+Pro&display=swap");
+
+.login-parent {
+  justify-content: center;
+  background-color: #f9f2e2;
+  display: contents;
+  height: 100%;
+  width: 100%;
+}
+
+.main-box {
+  justify-content: center;
+}
+
+.text-box1 {
+  width: fit-content;
+  height: fit-content;
+  font-family: junge;
+  margin-top: 35px;
+}
+
+.text-box2 {
+  font-family: Julius Sans One;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -5%;
+  letter-spacing: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-box3 {
+  font-family: monoton;
+  bottom: 40px;
+}
+
+.login-form {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #f9f2e2;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: monoton;
+  src: url("/src/pages/Login/Fonts/Monoton-regular.woff");
+}
+
+@font-face {
+  font-family: junge;
+  src: url("/src/pages/Login/Fonts/Junge-Regular.woff");
+}
+@font-face {
+  font-family: julius-sans-one;
+  src: url("/src/pages/Login/Fonts/JuliusSansOne-Regular.woff");
+}
+
+@font-face {
+  font-family: source-code-pro;
+  src: url("/src/pages/Login/Fonts/SourceCodePro-Bold.woff");
+}
+
+.login-email {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-left: 10px;
+}
+
+.login-forgot-password {
+  font-family: source-code-pro;
+}
+
+.login-password {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-left: 10px;
+}
+
+button[type="login-submit"] {
+  background-color: #f9f2e2;
+  color: black;
+  font-family: source-code-pro;
+  border: rgba(233, 78, 115, 0.6);
+  border-style: solid;
+  margin-top: 40px;
+  position: relative;
+  bottom: 25px;
+  margin-left: 0px;
+}
+
+button[type="login-submit"]:hover {
+  background-color: rgba(233, 78, 115, 0.6);
+  border-color: black;
+}
+
+.login-forgot-password:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.login-error-message {
+  margin-left: 230px;
+  font-family: source-code-pro;
+  color: red;
+  font-size: 18px;
+  position: relative;
+  bottom: 30px;
+}
+
+a {
+  color: black;
+  text-decoration: solid;
+  font-family: source-code-pro;
+  font-size: 22px;
+
+  margin-left: 495px;
+  position: relative;
+  bottom: 15px;
+}
+
+.success-message-login {
+  font-family: source-code-pro;
+  color: black;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.login-error-message {
+  margin-left: 280px;
+  font-family: source-code-pro;
+  color: red;
+  font-size: 18px;
+  position: relative;
+  bottom: 30px;
+}

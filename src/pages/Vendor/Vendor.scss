@@ -1,0 +1,489 @@
+@import url("https://fonts.cdnfonts.com/css/source-code-pro");
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Junge&family=Monoton&family=Source+Code+Pro&display=swap");
+.main-page {
+  background-color: rgb(249, 242, 226);
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .logout-vendor {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    padding-top: 1%;
+    padding-right: 1%;
+    button {
+      background-color: transparent;
+      // width: 100%;
+      color: black;
+      border: 1px solid black;
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+      border: 1px solid #ff93ad;
+      font-family: Source Code Pro;
+      font-weight: 800;
+      font-size: 20px;
+      padding: 10px 26px;
+      border-radius: 10px;
+      &:hover {
+        background-color: #ff93ad;
+        border: 1px solid #f9f2e2;
+      }
+    }
+  }
+
+  .comments-link{
+    &:hover{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  p {
+    font-family: Source Code Pro;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  h2 {
+    font-family: Source Code Pro;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  strong {
+    font-family: Source Code Pro;
+  }
+
+  .logout-button {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    padding-top: 1%;
+    padding-right: 1%;
+    align-items: center;
+    gap: 5%;
+    font-family: Source Code Pro;
+
+    .message{
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 18px;
+      width: 100%;
+      &:hover{
+        text-decoration: underline;
+        color: red;
+      }
+    }
+
+    button {
+      background-color: transparent;
+      color: black;
+      border: 1px solid black;
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+      border: 1px solid #ff93ad;
+      font-family: Source Code Pro;
+      font-weight: 800;
+      font-size: 20px;
+      padding: 10px 26px;
+      border-radius: 10px;
+      width: 40%;
+      &:hover {
+        background-color: #ff93ad;
+        border: 1px solid #f9f2e2;
+      }
+    }
+  }
+
+  .customer-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* Semi-transparent background overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the modal is on top of other elements */
+  }
+
+  /* Modal content */
+  .customer-modal-content {
+    display: flex;
+    flex-direction: column;
+    font-family: "Source Code Pro", sans-serif;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+
+    .close{
+      width: 100%;
+      display: flex;;
+      justify-content: flex-end;
+      padding: 10px;
+      img{
+        width: 5%;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+
+    form{
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+
+      input{
+        border: 1px solid black;
+        padding: 5px;
+        width: 50%;
+      }
+
+      .form-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      textarea{
+        border: 1px solid black;
+        padding: 5px;
+        width: 80%;
+        height: 100px;
+      }
+
+      button{
+        margin-top: 3%;
+        width: 40%;
+      }
+    }
+  }
+
+}
+
+.title {
+  padding: 2rem;
+  font-family: "Source Code Pro";
+}
+
+.main-page button {
+  background-color: #fafafa !important;
+  color: black;
+  width: 60%;
+}
+
+.my-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.main-page button:hover {
+  color: black;
+}
+
+.my-table {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #dadeff;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+}
+
+.my-table th {
+  padding: 15px;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  font-family: Source Code Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 20px; /* 83.333% */
+}
+
+.my-table tbody {
+  padding: 15px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.my-table img {
+  width: 150px;
+  height: auto;
+  padding: 1rem;
+}
+
+.main-page Button {
+  background-color: #4caf50;
+  border: none;
+  /* color: white; */
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border-radius: 10px !important;
+}
+
+.vendor-custom-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+
+  .custom-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-header {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .input-img {
+    padding: 10px;
+    input {
+      width: 100%;
+      align-self: center;
+      height: 100%;
+      font-family: Source Code Pro;
+      font-size: 20px;
+      &::placeholder {
+        text-align: center;
+        font-family: Source Code Pro;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        letter-spacing: 2px;
+      }
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      font-family: Source Code Pro;
+      font-weight: 800;
+    }
+  }
+
+  .input-group input {
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    align-self: center;
+    height: 60px;
+    font-family: Source Code Pro;
+    font-size: 20px;
+    margin-bottom: 2%;
+    &::placeholder {
+      text-align: center;
+      font-family: Source Code Pro;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      letter-spacing: 2px;
+    }
+  }
+  .input-group label {
+    display: flex;
+    flex-direction: column;
+    font-family: Source Code Pro;
+    font-weight: 800;
+  }
+
+  .input-available {
+    padding: 10px;
+    input {
+      width: 100%;
+      align-self: center;
+      height: 100%;
+      font-family: Source Code Pro;
+      font-size: 20px;
+      &::placeholder {
+        text-align: center;
+        font-family: Source Code Pro;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        letter-spacing: 2px;
+      }
+    }
+
+    display: flex;
+    justify-content: flex-start;
+    label {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      width: 50%;
+      font-family: Source Code Pro;
+      font-weight: 800;
+    }
+    span {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  select {
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    align-self: center;
+    height: 60px;
+    font-family: Source Code Pro;
+    font-size: 20px;
+    margin-bottom: 2%;
+    &::placeholder {
+      text-align: center;
+      font-family: Source Code Pro;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      letter-spacing: 2px;
+    }
+  }
+
+  .input-group {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-footer {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  button {
+    background-color: #ff93ad !important;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ff93ad;
+    font-family: Source Code Pro;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 10px 26px;
+    border-radius: 10px;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid #f9f2e2;
+    }
+  }
+
+  .modal-button {
+    margin: 0 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-page {
+    .logout-button{
+      button{
+        width: 60% !important;
+      }
+    }
+    .title-add-button {
+      margin-top: 1% !important;
+      align-items: center;
+      padding-top: 1%;
+    }
+    .details {
+      width: 100%;
+    }
+    .deets {
+      width: 55% !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .main-page {
+    .logout-button{
+      button{
+        width: 100% !important;
+      }
+    }
+    .title-add-button {
+      margin-top: 1% !important;
+      align-items: center;
+      padding-top: 0.001%;
+    }
+    .close{
+      img{
+        width: 5% !important;
+      }
+    }
+    .customer-modal-content{
+      width: 90%;
+      form{
+        width: 100% !important;
+      }
+    }
+    .logout-button {
+      padding-top: 2%;
+    }
+    .details {
+      width: 100%;
+      flex-direction: column;
+    }
+    .deets {
+      width: 90% !important;
+    }
+    .logout-button {
+      padding-bottom: 8%;
+    }
+
+    .info{
+      align-items: center !important;
+      margin-top: 2% !important;
+      p {
+        font-size: 18px;
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+    button {
+      font-size: 16px !important;
+    }
+
+    form{
+      width: 80% !important;
+    }
+
+    img{
+      width: 50% !important;
+    }
+    .order-heading{
+      width: 100% !important;
+      display: flex;
+      justify-content: center;
+      padding-left: 0 !important;
+    }
+  }
+}

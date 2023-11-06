@@ -1,0 +1,295 @@
+@import url("https://fonts.cdnfonts.com/css/source-code-pro");
+
+.card {
+  width: 320px;
+  height: 320px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(40, 40, 40, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+.market-food-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+img {
+  width: 50%;
+  height: auto;
+  margin-top: -15px;
+}
+
+.bottom {
+  display: flex;
+  justify-self: end !important;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.bottom img {
+  width: 12%;
+  height: auto;
+}
+
+.bottom img:hover {
+  cursor: pointer;
+}
+
+/* Modal container */
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the modal is on top of other elements */
+}
+
+/* Modal content */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  font-family: "Source Code Pro", sans-serif;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Modal header */
+.modal-content h2 {
+  margin-top: 0;
+}
+
+/* Modal form fields */
+.modal-content label {
+  display: block;
+  margin-top: 5px;
+}
+
+/* Add to cart Modal Buttons */
+
+.add-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  font-family: "Source Code Pro";
+  border: 2px solid pink;
+  border-radius: 0.6em;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.cancel-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  font-family: "Source Code Pro";
+  border: 2px solid pink;
+  border-radius: 0.6em;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.modal-content button:hover {
+  box-shadow: 0 0 40px 40px rgba(233, 78, 115, 0.6) inset;
+  border: 2px solid black;
+  color: black;
+}
+
+/* Close button */
+.modal-content .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Checkbox */
+.modal-content input {
+  height: 30px !important;
+  text-align: center;
+  font-family: Source Code Pro;
+  align-self: center;
+}
+
+.foodname {
+  color: #000;
+  text-align: center;
+  font-family: Source Code Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.chat-received{
+  font-size: 1.2rem;
+  color: red;
+  padding: 2% 0;
+}
+
+.addToCart-Modal {
+  font-family: Source Code Pro;
+  display: inline-block;
+  align-items: center;
+
+  .quantity{
+    display: flex;
+    flex-direction: column;
+    
+    strong{
+      color: red;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+hr {
+  border-top: 3px solid pink;
+}
+
+.mapModal {
+  display: flex;
+  flex-direction: column;
+  font-family: "Source Code Pro", sans-serif;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  max-height: 500px;
+  height: 100%;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.mapModal button {
+  margin-top: 0px;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  font-family: "Source Code Pro";
+  border: 2px solid pink;
+  border-radius: 0.6em;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.mapModal button:hover {
+  box-shadow: 0 0 40px 40px rgba(233, 78, 115, 0.6) inset;
+  border: 2px solid black;
+  color: black;
+}
+
+.quantity-label {
+  font-family: source-code-pro;
+  font-size: 17px;
+  align-self: center;
+  letter-spacing: -1px;
+}
+
+.add-to-cart-label {
+  font-family: source-code-pro;
+  font-size: 33px;
+  align-self: center;
+  letter-spacing: -1px;
+}
+
+.item-name-label {
+  font-family: source-code-pro;
+  font-size: 25px;
+  align-self: center;
+  letter-spacing: -1px;
+  margin-top: 20px;
+}
+
+.item-name {
+  font-family: source-code-pro;
+  font-size: 15px;
+  align-self: center;
+  letter-spacing: -1px;
+  margin-top: 20px;
+  color: red;
+}
+
+.detailsFood {
+  font-family: source-code-pro;
+  font-style: normal;
+  margin-top: 10px;
+}
+
+.comments {
+  img {
+    cursor: pointer;
+  }
+  .custom-inner-shadow {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .comment-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+    .comment-modal-content {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      height: 50%;
+
+      .close-button {
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+          width: 5%;
+        }
+      }
+    }
+  }
+}

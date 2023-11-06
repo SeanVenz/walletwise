@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Junge&family=Monoton&family=Source+Code+Pro&display=swap");
+
+.verify-parent {
+  display: flex;
+  flex-direction: row;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+
+  .potato-box {
+    display: flex;
+    width: 45%;
+    height: 100%;
+    padding-top: 5%;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .verify-right {
+    background-color: #f9f2e2;
+    width: 50%;
+    padding-top: 5%;
+  }
+  .verify-wallet {
+    display: flex;
+    justify-content: center;
+    font-family: Julius Sans One;
+    font-weight: 400 !important;
+    font-size: 120px;
+    letter-spacing: 20px !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  .login-link{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2%;
+    a {
+      margin-left: 0px;
+      bottom: 0;
+      color: #ff93ad;
+      border-bottom: 1px solid #ff93ad;
+    }
+  }
+
+
+  .login-btn-forgot{
+    display: flex;
+    justify-content: center;
+  }
+
+  
+
+  .verify-wise {
+    display: flex;
+    justify-content: center;
+    font-family: Monoton;
+    font-size: 100px;
+    letter-spacing: 10px;
+    margin-top: -5%;
+    padding-bottom: 2%;
+  }
+
+  .message {
+    display: flex;
+    justify-content: center;
+    font-family: Junge;
+    padding-bottom: 2%;
+    font-size: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .verify-message-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .message-verify {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    font-family: Junge;
+    padding-bottom: 2%;
+    font-size: 16px;
+    align-items: center;
+    text-align: center;
+    color: red;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    font-family: Junge;
+    padding-bottom: 2%;
+    font-size: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .error-message-verify {
+    color: red;
+    font-family: Source Code Pro;
+    margin-bottom: 2%;
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  button {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ff93ad;
+    font-family: Source Code Pro;
+    font-weight: 800;
+    font-size: 25px;
+    padding: 15px 32px;
+    border-radius: 10px;
+    &:hover {
+      background-color: #ff93ad;
+      border: 1px solid #f9f2e2;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .verify-parent {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f2e2;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    height: 100vh;
+
+    .potato-box {
+      padding-top: 0;
+      height: 30%;
+      margin-top: -8%;
+    }
+
+    .verify-right {
+      padding-top: 0;
+      margin-top: -8%;
+      width: 80%;
+    }
+
+    .verify-wallet {
+      font-size: 60px !important;
+      letter-spacing: 10px !important;
+      font-weight: 800 !important;
+    }
+
+    .verify-wise {
+      font-size: 60px !important;
+      margin-top: -2% !important;
+    }
+
+    button {
+      padding-top: 3%;
+      width: 70%;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .verify-parent {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f2e2;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    height: 100vh;
+
+    .verify-wallet {
+      font-size: 40px !important;
+      letter-spacing: 10px !important;
+      font-weight: 800 !important;
+    }
+
+    .verify-wise {
+      font-size: 40px !important;
+      margin-top: -2% !important;
+    }
+
+    .message {
+      font-size: 20px;
+    }
+
+    .submitting-message {
+      font-size: 20px;
+    }
+
+    .verify-right {
+      width: 80%;
+      padding-top: 0;
+    }
+
+    .potato-box {
+      height: 30%;
+      margin-top: -50%;
+    }
+
+    button {
+      font-size: 16px !important;
+      padding: 10px 20px;
+      width: 80% !important;
+    }
+  }
+}
