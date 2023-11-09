@@ -36,7 +36,7 @@ const StudentMarket = () => {
     if (isFullCourseMeal) {
       let budgetRemaining = budget; // Initialize with the budget value
       const itemsToInclude = [];
-  
+
       // Iterate through the items to build a list of items that fit the budget
       foods.forEach((item) => {
         if (item.Name === "Rice" && parseFloat(item.Price) <= budgetRemaining) {
@@ -57,8 +57,7 @@ const StudentMarket = () => {
             budgetRemaining -= parseFloat(mainDishes[0].Price); // Deduct the price of the most expensive main dish
             itemsToInclude.push(mainDishes[0]); // Add the most expensive main dish to the itemsToInclude array
           }
-        }
-        else if (
+        } else if (
           item.FoodType === "Drinks" &&
           parseFloat(item.Price) <= budgetRemaining
         ) {
@@ -66,10 +65,10 @@ const StudentMarket = () => {
           itemsToInclude.push(item);
         }
       });
-  
+
       // Check if the current food item is in the list of items to include
       const includeCurrentItem = itemsToInclude.some((item) => item === food);
-  
+
       if (itemsToInclude.length === 0) {
         return "No full course options within the budget.";
       } else {
@@ -79,7 +78,6 @@ const StudentMarket = () => {
       return true; // Include all items if the checkbox is not checked
     }
   };
-  
 
   return (
     <div className="market-parent">
@@ -118,11 +116,12 @@ const StudentMarket = () => {
           </select>
         </div>
         <div className="full-course-meal-filter">
-          <label>
+          <label className="text-[20px] ml-10">
             Full Course Meal
             <input
               type="checkbox"
               onChange={(e) => setIsFullCourseMeal(e.target.checked)}
+              className="ml-2"
             />
           </label>
         </div>
