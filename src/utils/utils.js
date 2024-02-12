@@ -12,7 +12,7 @@ export function formatTimestamp(timestamp) {
     hour12: true,
   });
   return formattedDate;
-}
+} 
 
 export function groupItemsByStore(deliveryItems) {
   const storeItemsMap = new Map();
