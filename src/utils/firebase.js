@@ -29,6 +29,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
-const mapBoxToken = 'pk.eyJ1Ijoic3BlY2NjY2MiLCJhIjoiY2xuYWNmdTYxMDIycjJpcDF3cGRya3NmZSJ9.mAXVfy5YizpJb3o_3eqqMQ';
+const mapBoxToken = 'pk.eyJ1Ijoic3BlY2NjY2MiLCJhIjoiY2xzaTd5bmtrMTc3bzJrb3V0a294MWNtZSJ9.5hzn4_o5CYOcyvNIVzMk5Q';
 
 export { auth, db, storage, collection, getDocs, mapBoxToken  };
