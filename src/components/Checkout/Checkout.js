@@ -34,6 +34,17 @@ function Checkout({
   const [isLoading, setIsLoading] = useState(false);
   const [isGetting, setIsGetting] = useState(false);
   const [total, setTotal] = useState();
+  const [isLocationWithinCIT, setIsLocationWithinCIT] = useState(true); // New state variable for location check
+
+  // Define CIT square coordinates
+  const upperLeftLongitude = 123.87584793126894;
+  const upperLeftLatitude = 10.29833910570575;
+  const lowerLeftLongitude = 123.87776249843915;
+  const lowerLeftLatitude = 10.290490158405248;
+  const upperRightLongitude = 123.88281891942336;
+  const upperRightLatitude = 10.299401717404876;
+  const lowerRightLongitude = 123.8838989316709;
+  const lowerRightLatitude = 10.294112773733147;
 
   const handleOpenModal = () => {
     setShowModal(true);
@@ -49,6 +60,18 @@ function Checkout({
           setLongitude(position.coords.longitude);
           setLocationPermissionGranted(true);
           setIsGetting(false);
+
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+
+          // Check if the location is within CIT square
+          const isWithinCIT =
+            longitude >= lowerLeftLongitude &&
+            longitude <= lowerRightLongitude &&
+            latitude >= lowerLeftLatitude &&
+            latitude <= upperLeftLatitude;
+
+          setIsLocationWithinCIT(isWithinCIT);
         },
         (error) => {
           console.error("Error getting user location:", error);
@@ -233,16 +256,24 @@ function Checkout({
               </>
             ) : (
               <>
-                <h2>Confirm Checkout</h2>
-                {hasOrder || hasDelivery ? (
-                  <p className="error">Finish your current transaction first</p>
-                ) : null}
-                <div className="first-questions">
-                  <button onClick={handleCheckout} disabled={isLoading}>
-                    {isLoading ? "Loading..." : "Confirm"}
-                  </button>
-                  <button onClick={handleCloseModal}>Cancel</button>
-                </div>
+                {isLocationWithinCIT ? (
+                  <>
+                    <h2>Confirm Checkout</h2>
+                    {hasOrder || hasDelivery ? (
+                      <p className="error">
+                        Finish your current transaction first
+                      </p>
+                    ) : null}
+                    <div className="first-questions">
+                      <button onClick={handleCheckout} disabled={isLoading}>
+                        {isLoading ? "Loading..." : "Confirm"}
+                      </button>
+                      <button onClick={handleCloseModal}>Cancel</button>
+                    </div>
+                  </>
+                ) : (
+                  <p className="error">Location is not within CIT</p>
+                )}
               </>
             )}
           </div>
