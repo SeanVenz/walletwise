@@ -226,7 +226,7 @@ function StudentDelivery() {
 
   // Render the "Accept Order" button based on location and other conditions
   const renderAcceptOrderButton = (delivery) => {
-    // if (isLocationWithinCIT) {
+    if (isLocationWithinCIT) {
       if (currentUser === delivery.userId) {
         if (delivery.isOrderAccepted) {
           return (
@@ -293,10 +293,10 @@ function StudentDelivery() {
           }
         }
       }
-    // }
-    //  else {
-    //   return <p className="order-not-accepted">Location is not within CIT</p>;
-    // }
+    }
+     else {
+      return <p className="order-not-accepted">Location is not within CIT</p>;
+    }
   };
 
   return (
