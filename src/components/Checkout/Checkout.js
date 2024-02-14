@@ -256,24 +256,16 @@ function Checkout({
               </>
             ) : (
               <>
-                {isLocationWithinCIT ? (
-                  <>
-                    <h2>Confirm Checkout</h2>
-                    {hasOrder || hasDelivery ? (
-                      <p className="error">
-                        Finish your current transaction first
-                      </p>
-                    ) : null}
-                    <div className="first-questions">
-                      <button onClick={handleCheckout} disabled={isLoading}>
-                        {isLoading ? "Loading..." : "Confirm"}
-                      </button>
-                      <button onClick={handleCloseModal}>Cancel</button>
-                    </div>
-                  </>
-                ) : (
-                  <p className="error">Location is not within CIT</p>
-                )}
+                <h2>Confirm Checkout</h2>
+                {hasOrder || hasDelivery ? (
+                  <p className="error">Finish your current transaction first</p>
+                ) : null}
+                <div className="first-questions">
+                  <button onClick={handleCheckout} disabled={isLoading}>
+                    {isLoading ? "Loading..." : "Confirm"}
+                  </button>
+                  <button onClick={handleCloseModal}>Cancel</button>
+                </div>
               </>
             )}
           </div>
@@ -282,5 +274,74 @@ function Checkout({
     </div>
   );
 }
+
+// return (
+//   <div className="checkout">
+//     <div className="img-holder">
+//       <img src={bottomLogo} alt="logo" />
+//     </div>
+//     <div className="checkout-button">
+//       <div className="total">
+//         {cartItems && cartItems.length > 0 ? (
+//           <>
+//             <p>Total : ₱{total}</p>
+//             <button
+//               onClick={handleOpenModal}
+//               disabled={hasOrder || hasDelivery}
+//             >
+//               {isLoading ? "Loading..." : "Check Out"}
+//             </button>
+//           </>
+//         ) : (
+//           <p>No Orders Yet</p>
+//         )}
+//       </div>
+//     </div>
+
+//     {showModal && (
+//       <div className="checkout-modal">
+//         <div className="checkout-modal-content">
+//           {!locationPermissionGranted ? (
+//             <>
+//               <p className="confirmation">
+//                 Do you want to use your current location as the delivery
+//                 destination?
+//               </p>
+//               <div className="first-questions">
+//                 {isGetting ? (
+//                   "Getting Current Location"
+//                 ) : (
+//                   <button onClick={handleUseCurrentLocation}>Confirm</button>
+//                 )}
+
+//                 <button onClick={handleCloseModal}>No</button>
+//               </div>
+//             </>
+//           ) : (
+//             <>
+//               {isLocationWithinCIT ? (
+//                 <>
+//                   <h2>Confirm Checkout</h2>
+//                   {hasOrder || hasDelivery ? (
+//                     <p className="error">Finish your current transaction first</p>
+//                   ) : null}
+//                   <div className="first-questions">
+//                     <button onClick={handleCheckout} disabled={isLoading}>
+//                       {isLoading ? "Loading..." : "Confirm"}
+//                     </button>
+//                     <button onClick={handleCloseModal}>Cancel</button>
+//                   </div>
+//                 </>
+//               ) : (
+//                 <p className="error">Location is not within CIT</p>
+//               )}
+//             </>
+//           )}
+//         </div>
+//       </div>
+//     )}
+//   </div>
+// );
+
 
 export default Checkout;
